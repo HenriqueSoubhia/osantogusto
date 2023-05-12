@@ -205,7 +205,7 @@ main .section-pratos .btn {
   }
 
   .section-pratos .photos-group {
-    height: none !important;
+    height: fit-content !important;
     display: flex !important;
     flex-direction: column;
   }
