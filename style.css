@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  background-color: #fefefe;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: #660c0c 2px solid;
+}
+header > img {
+  height: 80%;
+}
+header .header-menu {
+  display: none;
+}
+header > nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+header a {
+  text-decoration: none;
+  color: #660c0c;
+  font-weight: 700;
+}
+header .drop-menu {
+  display: none;
+  height: 80%;
+  position: relative;
+}
+header .drop-menu nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 64px;
+}
+header .drop-menu nav a {
+  padding: 16px;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+}
+main section {
+  margin-bottom: 120px;
+  padding: 0 32px;
+}
+main .section-home {
+  background: url("imgs/fachada.jpg");
+  width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-home h1 {
+  text-align: center;
+  font-size: 100px;
+  color: #fefefe;
+  background-color: #660c0c;
+  padding: 16px;
+}
+main .section-sobre {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .section-sobre div {
+  flex: 1.2;
+  padding-right: 32px;
+}
+main .section-sobre div h2 {
+  color: #660c0c;
+  margin-bottom: 16px;
+}
+main .section-sobre div p {
+  margin-bottom: 32px;
+  min-width: 350px;
+}
+main .section-sobre img {
+  min-width: 350px;
+  height: 100%;
+}
+main .section-pratos {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #660c0c;
+}
+main .section-pratos h2 {
+  color: #fefefe;
+  margin-bottom: 32px;
+}
+main .section-pratos .photos-group {
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+main .section-pratos .photos-group div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+}
+main .section-pratos .photos-group div p {
+  padding: 24px;
+  width: 100%;
+  font-size: 20px;
+  color: #fefefe;
+  background-color: #505050ea;
+}
+main .section-pratos .photos-group div:nth-child(1) {
+  background-image: url("imgs/feijoada.jpg");
+  grid-area: 1/1/3/3;
+}
+main .section-pratos .photos-group div:nth-child(2) {
+  background-image: url("imgs/torresmo.jpg");
+  grid-area: 1/3/2/5;
+}
+main .section-pratos .photos-group div:nth-child(3) {
+  background-image: url("imgs/kafta-pao.webp");
+  grid-area: 2/3/3/5;
+}
+main .section-pratos .photos-group div:nth-child(4) {
+  background-image: url("imgs/fritas-cheddar.jpeg");
+  grid-area: 1/5/2/6;
+}
+main .section-pratos .photos-group div:nth-child(5) {
+  background-image: url("imgs/picanha-mandioca.jpeg");
+  grid-area: 2/5/3/6;
+}
+main .section-pratos .btn {
+  width: 30%;
+  align-self: flex-end;
+  min-width: 300px;
+}
+
+.btn {
+  cursor: pointer;
+  color: #fefefe;
+  background: #d89e00;
+  text-decoration: none;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background: #a57900;
+}
+.btn:active {
+  background: #725300;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (width < 678px) {
+  header > nav {
+    display: none;
+  }
+  header .drop-menu {
+    display: flex;
+  }
+
+  section {
+    padding: 8px !important;
+  }
+
+  .section-home h1 {
+    font-size: 64px !important;
+  }
+
+  .section-sobre div {
+    padding: 0 !important;
+  }
+
+  .section-pratos .photos-group {
+    height: none !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+  .section-pratos .photos-group div {
+    min-height: 400px;
+  }
+}
