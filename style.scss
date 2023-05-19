@@ -16,12 +16,13 @@ html {
 }
 
 header {
+    padding: 0 32px;
     position: fixed;
     background-color: $white-color;
     width: 100%;
     height: 64px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: $primary-color 2px solid;
 
@@ -50,6 +51,10 @@ header {
         display: none;
         height: 80%;
         position: relative;
+
+        img{
+            width: 70%;
+        }
         nav{
             position: absolute;
             display: flex;
@@ -67,7 +72,7 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    padding-top: 64px;
+    padding-top: 9vh;
 
     section {
         margin-bottom: 120px;
@@ -198,6 +203,54 @@ main {
         }
 
     }
+    .section-contact{
+
+        >div{
+
+            display: flex;
+            flex-wrap: wrap;
+             
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        h2{
+            color: $primary-color;
+            margin-bottom: 16px;
+        }
+
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            flex: 0.7;
+            margin-left: 20px;
+            min-width: 350px;
+            div{
+                background-color: $primary-color;
+                color: $white-color;
+                display: flex;
+                justify-content: flex-end;
+                padding: 20px;                
+
+                &:nth-child(even){
+                    color: $primary-color;
+                    background-color: $white-color;
+
+                }
+
+                img{
+                    width: 20px;
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        iframe{
+            flex: 1;
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .btn {
@@ -216,6 +269,56 @@ main {
 
     &:active {
         background: darken($secundary-color, 20%);
+    }
+}
+
+footer{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: darken( $primary-color, 10%);
+    color: $white-color;
+
+    h4{
+        margin-bottom: 40px;
+        color: #ffffff8f;
+        font-weight: bold;
+    }
+    
+    p{
+        margin-bottom: 40px;
+        min-width: 350px;
+        width: 50%;
+        text-align: center;
+    }
+    
+    .social-medias{
+        margin-bottom: 40px;
+        display: flex;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 12px;
+            text-decoration: none;
+            width: fit-content;
+            height: fit-content;
+            img{
+                width: 40px;
+            }
+
+        }
+    }
+
+    small{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #00000050;
+        span{
+            color: #ffffff8f
+        }
     }
 }
 
@@ -260,4 +363,14 @@ main {
             }
         }
     }
+
+
+    .section-contact{
+        .contact-info{
+            margin: 0!important;
+
+        }
+    }
+
+
 }
